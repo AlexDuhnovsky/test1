@@ -1,0 +1,263 @@
+body {
+  background-color: #1d1d1d;
+  max-height: 900px;
+  display: flex;
+  overflow-x: hidden;
+
+}
+
+.container {
+  max-width: 1202px;
+  padding: 0 15px;
+  margin: 0 auto;
+  /* overflow: hidden; */
+}
+
+.container::after {
+  /* background-image */
+  /* content: url('images/background-decoration__left-part.png');
+  position: absolute;
+  left: 0;
+  top: 112px; */
+}
+
+/* ======================================================= */
+
+.header-settings {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-top: 60px;
+}
+
+.header-settings::after {
+  content: url('images/background-decoration__right-part.png');
+  position: absolute;
+  right: 0;
+  top: 142px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.header__logo {
+  margin-left: 400px;
+}
+
+.header__logo-img {
+  /* position: relative;
+  margin-top: -5px;
+  margin-left: -14px; */
+}
+
+.header__burger-logo {
+  /* position: relative;
+  margin-top: -10px;
+  margin-right: -45px; */
+}
+
+.header__burger {
+  margin-right: -2px;
+  margin-left: auto;
+  margin-top: -12px;
+}
+
+/* ======================================================= */
+.main__content {
+  display: flex;
+  flex: 0 1 auto;
+}
+
+.main__offer-part {
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-part__title {
+  margin-top: 190px;
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 61px;
+  color: #D2D2D2;
+  letter-spacing: -0.5px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.offer-part__description {
+  display: block;
+  width: 559px;
+  height: 111px;
+  text-align: left;
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #A9A9A9;
+  margin: 35px 0 88px 0;
+  /* letter-spacing: 1px; */
+  margin-bottom: 60px;
+}
+
+.offer-part__button-section {
+  display: block;
+  width: 241px;
+}
+
+.button {
+  width: 241px;
+  height: 58px;
+  left: 133px;
+  top: 500px;
+  background: #27AE60;
+  border-radius: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+  padding: 10px auto;
+}
+
+.offer-part__button-line {
+  width: 69.5px;
+  height: 2px;
+  background-color: #27AE60;
+  border-radius: 2px;
+  margin: 15px auto 0 auto;
+}
+
+/* ======================================================= */
+.main__illustration-part {
+  display: flex;
+  margin-top: 52px;
+  width: 720px;
+  height: 580px;
+}
+
+.illustration-part__character {
+  position: relative;
+  top: 212px;
+  right: -40px;
+  z-index: 400;
+}
+
+.illustration-part__window {
+  position: relative;
+  top: 66px;
+  right: 511px;
+  z-index: 100;
+}
+
+.illustration-part__lower-coin {
+  position: relative;
+  top: 210px;
+  right: 595px;
+  z-index: 300;
+  animation-name: lower-coin;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* animation: lower-coin 3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0 infinite alternate none; */
+}
+
+@keyframes lower-coin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.illustration-part__higher-coin {
+  position: relative;
+  top: 124px;
+  right: 622px;
+  z-index: 200;
+  animation-name: higher-coin;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-delay: 1.5s;
+}
+
+@keyframes higher-coin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(2.5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.illustration-part__plant {
+  position: relative;
+  top: 190px;
+  right: 618px;
+  z-index: 500;
+  animation-name: plant;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 3s;
+
+}
+
+@keyframes plant {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.07);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ================================================================ */
+footer {
+  margin-bottom: 0;
+}
+
+.footer__down-arrow {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+/* .main__down-arrow-settings {
+  text-align: center;
+} */
+
+footer::after {
+  content: url('images/background-decoration__left-part.png');
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
